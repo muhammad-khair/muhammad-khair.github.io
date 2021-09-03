@@ -10,8 +10,12 @@ export default {
     name: 'Greeting',
     data() {
         return {
-            greeting: 'Hi',
-            description: 'This is my site'
+            greeting: 'Welcome!',
+            description: 'My name is Muhammad Khair. I am a Computer Science Student in NUS.',
+            sites: [
+                {name: 'GitHub', label: 'muhammad-khair', image: ''},
+                {name: 'LinkedIn', label: '', image: ''}
+            ]
         }
     }
 }

@@ -3,10 +3,14 @@
         <div>
             <h3 style="text-align: center;">Let's connect!</h3>
         </div>
-        <div class="nav-item" v-for="contact in contacts" :key="contact">
-            <a class="nav-link" :href="contact.link" target="_blank" rel="noopener noreferrer">{{ contact.name }}</a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav">
+                <li class="nav-item" v-for="contact in contacts" :key="contact">
+                    <a class="nav-link" :href="contact.link" target="_blank" rel="noopener noreferrer">{{ contact.name }}</a>
+                </li>
+            </ul>
+            <a href="#" class="float-right">Jump back to top</a>
         </div>
-        <a href="#" class="float-right">Jump back to top</a>
     </div>
 </template>
 

@@ -1,16 +1,16 @@
 <template>
     <div id="skills">
         <h1>Skills</h1>
-        <ul>
-            <li v-for="skill in skills" :key="skill">
-                <h3>{{ skill.name }}</h3>
-                <p>{{ skill.level }}</p>
-            </li>
-        </ul>
+        <div v-for="skill in skills" :key="skill">
+            <h3>{{ skill.name }}</h3>
+            <p>{{ skill.level }}</p>
+        </div>
     </div>
 </template>
 
 <script>
+// todo import relevant tool images .png
+
 export default {
     name: 'Skills',
     data() {

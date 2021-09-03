@@ -1,9 +1,14 @@
 <template>
     <div class="content">
+        <br>
         <Greeting />
+        <br>
         <Skills />
+        <br>
         <Experience />
+        <br>
         <Projects />
+        <br>
     </div>
 </template>
 

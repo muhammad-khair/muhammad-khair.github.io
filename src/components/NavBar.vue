@@ -1,7 +1,7 @@
 <template>
     <nav id="header" class="navbar navbar-expand-lg navbar-light bg-light">
         <a class="navbar-brand mb-0 h1" href="#">
-            <img :src="logoPath" width="20" height="20" alt="">
+            <img :src="logo" width="20" height="20" alt="">
             {{ name }}
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -18,12 +18,14 @@
 </template>
 
 <script>
+import image from '../assets/logo.png';
+
 export default {
     name: "NavBar",
     data() {
         return {
             name: 'Muhammad Khair',
-            logoPath: 'src/assets/logo.png', // todo
+            logo: image, 
             navButtons: [
                 {name: 'Greeting', link: '#greeting'},
                 {name: 'Skills', link: '#skills'},
