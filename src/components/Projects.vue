@@ -1,8 +1,8 @@
 <template>
     <div id="projects">
-        <h1>Projects</h1>
+        <h1>{{ title }}</h1>
         <div>
-            <span>Coming soon...</span>
+            <span>{{ message }}</span>
         </div>
     </div>
     <br>
@@ -10,7 +10,13 @@
 
 <script>
 export default {
-    name: 'Projects'
+    name: 'Projects',
+    data() {
+        return {
+            title: 'Projects',
+            message: 'Coming soon..'
+        }
+    }
 }
 </script>
 

@@ -1,13 +1,13 @@
 <template>
     <div id="experience">
-        <h1>Experience</h1>
-        <p>Here are some of the places where I build my experience on.</p>
+        <h1>{{ title }}</h1>
+        <p>{{ message }}</p>
         <div v-for="job in jobs" :key="job">
             <div class="exp-group block">
                 <img :src="job.image" height="100" alt="">
-                <h3>{{ job.name }}</h3>
+                <h2>{{ job.name }}</h2>
                 <h4>{{ job.title }}</h4>
-                <p>{{ job.timeline }}</p>
+                <h5>{{ job.timeline }}</h5>
                 <p>{{ job.description }}</p>
                 <div class="d-flex flex-wrap justify-content-around spacing">
                     <div v-for="tool in job.tools" :key="tool">
@@ -38,16 +38,30 @@ import bash from '../assets/images/bash.png';
 import jmeter from '../assets/images/jmeter.png';
 import springboot from '../assets/images/springboot.png';
 
+const message = 'Here are some of the places where I build my experience on.';
+const taigerMessage = "Developed a new admin configuration feature in Omnitive's Semantics Search Engine - "
+        + "from refining the epic's user stories to proposing and implementing the required RESTful API "
+        + "endpoints, database structures and services. Automation scripts were also made to improve update "
+        + "and cross-dependencies between the numerours repositories.";
+
+const nusMessage = "Taught functional programming constructs, fundamental data structures, basics in "
+        + "algorithmic design, common sorting algorithms as well as object-oriented programming.";
+
+const innovationMessage = "Introduced fun and engaging programming lessons out of their academic curriculum, "
+        + "this project aims to educate and instil in youths an appreciation of information technology.";
+
 export default {
     name: 'Experience',
     data() {
         return {
+            title: 'Experience',
+            message: message,
             jobs: [
                 {
                     name: 'TAIGER',
                     title: 'Sofware Engineering Intern',
                     timeline: 'May 2021 to Aug 2021',
-                    description: 'Worked under product team.',
+                    description: taigerMessage,
                     image: taiger,
                     tools: [
                         {name: 'Java', image: java},
@@ -66,7 +80,7 @@ export default {
                     name: 'NUS',
                     title: 'Part Time Teaching Assistant',
                     timeline: 'Jan 2021 to May 2021',
-                    description: 'Taught programming methodologies in CS1010E using Python.',
+                    description: nusMessage,
                     image: nus,
                     tools: [
                         {name: 'Python', image: python}
@@ -76,8 +90,7 @@ export default {
                     name: 'Project Innovation',
                     title: 'Project Lead [Volunteer]',
                     timeline: 'Jan 2020 to Dec 2020',
-                    description: 'Lead in a CIP that teaches youth visual programming to ' 
-                        + 'inspire them about the tech domain.',
+                    description: innovationMessage,
                     image: innovation,
                     tools: [
                         {name: 'Scratch', image: scratch}

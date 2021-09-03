@@ -26,11 +26,20 @@ body {
     text-align: center;
     color: #2c3e50;
     background-color: whitesmoke;
+    font-size: large;
 }
 .spacing > div {
     margin: 10px;
 }
 .block {
     background-color: #F0EFF4;
+}
+.split {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+.wide-split {
+    margin-right: 15px;
+    margin-left: 15px;
 }
 </style>

@@ -1,7 +1,7 @@
 <template>
     <div id="skills">
-        <h1>Skills</h1>
-        <p>Here are some of the tools that I use most often.</p>
+        <h1>{{ title }}</h1>
+        <p>{{ message }}</p>
         <div class="d-flex flex-wrap justify-content-around spacing">
             <div v-for="skill in skills" :key="skill" class="skill-group block">
                 <img :src="skill.image" height="90" alt="">
@@ -20,10 +20,14 @@ import html from '../assets/images/html.png';
 import css from '../assets/images/css.png';
 import postgresql from '../assets/images/postgresql.png';
 
+const message = 'Here are some of the tools that I use most often.';
+
 export default {
-    name: 'Skills',
+    title: 'Skills',
     data() {
         return {
+            title: 'Skills',
+            message: message,
             skills: [
                 {name: 'Python', level: 'Proficient', image: python},
                 {name: 'Java', level: 'Proficient', image: java},
