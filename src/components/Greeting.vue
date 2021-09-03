@@ -1,7 +1,9 @@
 <template>
-    <div id="greeting">
-        <h1>{{ greeting }}</h1>
-        <p>{{ description }}</p>
+    <div id="greeting" class="jumbotron">
+        <div class="container">
+            <h1>{{ greeting }}</h1>
+            <p>{{ description }}</p>
+        </div>
     </div>
 </template>
 
