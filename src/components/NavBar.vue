@@ -1,8 +1,8 @@
 <template>
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand mb-0 h1" href="#">
-            <img :src="logo" width="20" height="20" alt="">
-            {{ name }}
+            <img :src="logo" width="40" height="40" alt="">
+            <span id="site-name">{{ name }}</span>
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav ml-auto">
@@ -38,7 +38,7 @@ export default {
             logo: image, 
             darkMode: false,
             navButtons: [
-                {name: 'Greeting', link: '#greeting'},
+                {name: 'Home', link: '#'},
                 {name: 'Skills', link: '#skills'},
                 {name: 'Experience', link: '#experience'},
                 {name: 'Projects', link: '#projects'},
@@ -48,12 +48,35 @@ export default {
     },
     methods: {
         toggleTheme() {
-            this.darkMode = !this.darkMode;
+            this.darkMode = !(this.darkMode);
+
+            if (this.darkMode) {
+                document.body.style.color = 'whitesmoke';
+                document.body.style.backgroundColor = '#1E1E24';
+                [...document.getElementsByClassName('block')].forEach(
+                    (elem) => {
+                        elem.style.backgroundColor = '#343a40';
+                    }
+                    // #2c3e50 #1E1E24 #343a40
+                );
+
+            } else {
+                document.body.style.color = '#2c3e50';
+                document.body.style.backgroundColor = 'whitesmoke'; 
+                [...document.getElementsByClassName('block')].forEach(
+                    (elem) => {
+                        elem.style.backgroundColor = '#F0EFF4';
+                    }
+                );
+                
+            }
         }
     }
 }
 </script>
 
 <style>
-
+#site-name {
+    margin-left: 15px;
+}
 </style>

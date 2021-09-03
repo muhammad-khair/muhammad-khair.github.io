@@ -2,20 +2,20 @@
     <div id="experience">
         <h1>Experience</h1>
         <p>Here are some of the places where I build my experience on.</p>
-        <br>
         <div v-for="job in jobs" :key="job">
-            <img :src="job.image" height="100" alt="">
-            <h3>{{ job.name }}</h3>
-            <h4>{{ job.title }}</h4>
-            <p>{{ job.timeline }}</p>
-            <p>{{ job.description }}</p>
-            <div class="d-flex flex-wrap justify-content-around">
-                <div v-for="tool in job.tools" :key="tool">
-                    <img :src="tool.image" height="75" alt="">
-                    <h5>{{ tool.name }}</h5>
+            <div class="exp-group block">
+                <img :src="job.image" height="100" alt="">
+                <h3>{{ job.name }}</h3>
+                <h4>{{ job.title }}</h4>
+                <p>{{ job.timeline }}</p>
+                <p>{{ job.description }}</p>
+                <div class="d-flex flex-wrap justify-content-around spacing">
+                    <div v-for="tool in job.tools" :key="tool">
+                        <img :src="tool.image" height="80" alt="">
+                        <h5>{{ tool.name }}</h5>
+                    </div>
                 </div>
             </div>
-            <br>
         </div>
     </div>
 </template>
@@ -74,7 +74,7 @@ export default {
                 },
                 {
                     name: 'Project Innovation',
-                    title: 'Project Lead [Volunteering]',
+                    title: 'Project Lead [Volunteer]',
                     timeline: 'Jan 2020 to Dec 2020',
                     description: 'Lead in a CIP that teaches youth visual programming to ' 
                         + 'inspire them about the tech domain.',
@@ -90,5 +90,9 @@ export default {
 </script>
 
 <style>
-
+.exp-group {
+    margin: 30px;
+    padding: 30px;
+    border-radius: 30px;
+}
 </style>

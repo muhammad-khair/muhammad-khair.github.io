@@ -5,6 +5,7 @@
             <span>Coming soon...</span>
         </div>
     </div>
+    <br>
 </template>
 
 <script>

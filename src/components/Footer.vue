@@ -1,5 +1,5 @@
 <template>
-    <div class="navbar navbar-expand-lg navbar-dark bg-dark" id="contact">
+    <div class="navbar navbar-expand-lg navbar-dark bg-dark" id="footer">
         <div>
             <h3 class="text-white bg-dark">Contact</h3>
         </div>
@@ -19,10 +19,26 @@ export default {
     data() {
         return {
             contacts: [
-                {name: 'Email', link: '#mailto:muhammad_khair@outlook.com', image:''},
-                {name: 'LinkedIn', link: 'https://www.linkedin.com/in/muhammadkhair-binabdulrashid/', image:''},
-                {name: 'GitHub', link: 'https://github.com/muhammad-khair', image:''},
-                {name: 'Resume', link: '', image:''} // todo
+                {
+                    name: 'Email',
+                    link: '#mailto:muhammad_khair@outlook.com',
+                    image: ''
+                },
+                {
+                    name: 'LinkedIn',
+                    link: 'https://www.linkedin.com/in/muhammadkhair-binabdulrashid/',
+                    image: ''
+                },
+                {
+                    name: 'GitHub',
+                    link: 'https://github.com/muhammad-khair',
+                    image: ''
+                },
+                {
+                    name: 'Resume',
+                    link: 'https://github.com/muhammad-khair/muhammad-khair.github.io/blob/main/public/resume.pdf',
+                    image: ''
+                }
             ]
         }
     }

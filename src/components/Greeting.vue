@@ -1,5 +1,5 @@
 <template>
-    <div id="greeting" class="jumbotron">
+    <div id="greeting" class="jumbotron block">
         <div class="container">
             <h1>{{ greeting }}</h1>
             <p>{{ description }}</p>

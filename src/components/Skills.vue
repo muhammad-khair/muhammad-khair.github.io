@@ -1,16 +1,15 @@
 <template>
     <div id="skills">
         <h1>Skills</h1>
-        <p>Here are some of the tools that I use most often</p>
-        <br>
-        <div class="d-flex flex-wrap justify-content-around">
-            <div v-for="skill in skills" :key="skill">
-                <img :src="skill.image" height="80" alt="">
+        <p>Here are some of the tools that I use most often.</p>
+        <div class="d-flex flex-wrap justify-content-around spacing">
+            <div v-for="skill in skills" :key="skill" class="skill-group block">
+                <img :src="skill.image" height="90" alt="">
                 <h3>{{ skill.name }}</h3>
-                <p>{{ skill.level }}</p>
             </div>
         </div>
     </div>
+    <br>
 </template>
 
 <script>
@@ -39,5 +38,8 @@ export default {
 </script>
 
 <style>
-
+.skill-group {
+    padding: 30px;
+    border-radius: 30px;
+}
 </style>

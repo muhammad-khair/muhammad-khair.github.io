@@ -1,7 +1,9 @@
 <template>
-    <NavBar />
-    <Content />
-    <Footer />
+    <div>
+        <NavBar />
+        <Content />
+        <Footer />
+    </div>
 </template>
 
 <script>
@@ -23,5 +25,12 @@ export default {
 body {
     text-align: center;
     color: #2c3e50;
+    background-color: whitesmoke;
+}
+.spacing > div {
+    margin: 10px;
+}
+.block {
+    background-color: #F0EFF4;
 }
 </style>
