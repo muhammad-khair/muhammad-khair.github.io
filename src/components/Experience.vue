@@ -1,15 +1,17 @@
 <template>
     <div id="experience">
         <h1>{{ title }}</h1>
-        <p>{{ message }}</p>
+        <p class="paragraph">{{ message }}</p>
         <div v-for="job in jobs" :key="job">
             <div class="exp-group block">
                 <img :src="job.image" height="100" alt="">
                 <h2>{{ job.name }}</h2>
                 <h4>{{ job.title }}</h4>
                 <h5>{{ job.timeline }}</h5>
-                <p>{{ job.description }}</p>
-                <div class="d-flex flex-wrap justify-content-around spacing">
+                <br>
+                <p class="paragraph">{{ job.description }}</p>
+                <br>
+                <div class="d-flex flex-wrap justify-content-around spacing paragraph">
                     <div v-for="tool in job.tools" :key="tool">
                         <img :src="tool.image" height="80" alt="">
                         <h5>{{ tool.name }}</h5>
@@ -39,6 +41,7 @@ import jmeter from '../assets/images/jmeter.png';
 import springboot from '../assets/images/springboot.png';
 
 const message = 'Here are some of the places where I build my experience on.';
+
 const taigerMessage = "Developed a new admin configuration feature in Omnitive's Semantics Search Engine - "
         + "from refining the epic's user stories to proposing and implementing the required RESTful API "
         + "endpoints, database structures and services. Automation scripts were also made to improve update "
@@ -77,7 +80,7 @@ export default {
                     ]
                 },
                 {
-                    name: 'NUS',
+                    name: 'National Uniersity of Singapore',
                     title: 'Part Time Teaching Assistant',
                     timeline: 'Jan 2021 to May 2021',
                     description: nusMessage,

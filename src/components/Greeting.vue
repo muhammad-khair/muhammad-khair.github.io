@@ -18,13 +18,8 @@
 </template>
 
 <script>
-const intro = "My name is Muhammad Khair. I am a Computer Science Student in National University of Singapore. "
-        + "For me, I like how intricate the different parts of technology, ranging from the "
-        + "software down to the hardware. I especially like Cybersecurity from my participations"
-        + "in Capture-The-Flags, and Coding Challenges to train my creative skills and learn more. "
-const goal = "As a whole, my aim is to put more emphasis into learning Computer Networks and "
-        + "Cybersecurity and build solutions for others in a confident and professional manner. ";
-        + "Take a look at my GitHub and my LinkedIn to know more about me!"
+const intro = "My name is Muhammad Khair. I am a Computer Science Student at the National University of Singapore. I like the intricacy of various technologies working together, starting from the software down to hardware. I constantly challenge myself in Capture-The-Flags events to push myself to learn more about Cybersecurity and participate in Algorithmic Coding Challenges to develop my creative problem-solving skills."
+const goal = "I aim to understand and appreciate Cybersecurity and Computer Networks on a deeper level to build solutions for others confidently and professionally. Take a look at my GitHub and my LinkedIn to know more about me!"
 
 export default {
     name: 'Greeting',

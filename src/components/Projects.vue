@@ -1,7 +1,7 @@
 <template>
     <div id="projects">
         <h1>{{ title }}</h1>
-        <div>
+        <div class="paragraph">
             <span>{{ message }}</span>
         </div>
     </div>

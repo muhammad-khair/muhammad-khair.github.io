@@ -1,7 +1,7 @@
 <template>
     <nav id="header" class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand mb-0 h1" href="#">
-            <img :src="logo" width="40" height="40" alt="">
+            <img :src="logo" @click="toggleTheme" width="40" height="40" alt="">
             <span id="site-name">{{ title }}</span>
         </a>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">

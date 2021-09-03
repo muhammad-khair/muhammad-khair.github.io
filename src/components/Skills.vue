@@ -1,8 +1,8 @@
 <template>
     <div id="skills">
         <h1>{{ title }}</h1>
-        <p>{{ message }}</p>
-        <div class="d-flex flex-wrap justify-content-around spacing">
+        <p class="paragraph">{{ message }}</p>
+        <div class="d-flex flex-wrap justify-content-around spacing paragraph">
             <div v-for="skill in skills" :key="skill" class="skill-group block">
                 <img :src="skill.image" height="90" alt="">
                 <h3>{{ skill.name }}</h3>
@@ -20,7 +20,7 @@ import html from '../assets/images/html.png';
 import css from '../assets/images/css.png';
 import postgresql from '../assets/images/postgresql.png';
 
-const message = 'Here are some of the tools that I use most often.';
+const message = 'Here are some of the tools that I use most often during my journey in Computer Science.';
 
 export default {
     title: 'Skills',
