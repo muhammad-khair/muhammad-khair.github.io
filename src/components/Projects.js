@@ -104,7 +104,7 @@ export default function Projects({ color }) {
               Other Projects
             </Text>
             <Center px={4}>
-              <ButtonGroup variant="outline">
+              <ButtonGroup display={'flex'} flexWrap={'wrap'} variant="outline">
                 <Button
                   colorScheme={selected === "All" ? `${color}` : "gray"}
                   onClick={() => handleSelected("All")}

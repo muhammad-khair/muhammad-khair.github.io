@@ -59,7 +59,7 @@ export default function Experience({ color }) {
             <Divider orientation="horizontal" />
           </Stack>
           <Center px={4}>
-            <ButtonGroup variant="outline">
+            <ButtonGroup display={'flex'} flexWrap={'wrap'} variant="outline">
               {options.map((option) => (
                 <Button
                   colorScheme={selected === option.value ? `${color}` : "gray"}
