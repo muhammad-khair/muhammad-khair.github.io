@@ -64,7 +64,7 @@
 ## National University of Singapore
 - *Teaching Assistant, Programming Methodology* | Jan'21 - May'21
 - ![nus](../assets/nus.png)
-- Tags: Financial Services, All
+- Tags: Teaching, All
 - Badges:
   - Python [teal]
 - List Items:

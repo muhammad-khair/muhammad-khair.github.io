@@ -1,7 +1,6 @@
 {
   "name": "portfolio",
   "version": "0.1.0",
-  "homepage": "https://muhammad-khair.github.io/muhammad-khair.github.io",
   "private": true,
   "dependencies": {
     "@chakra-ui/icons": "^2.1.1",
@@ -30,8 +29,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "deploy": "react-scripts build && gh-pages -d build"
+    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": [
