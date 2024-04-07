@@ -107,7 +107,7 @@ export default function Experience({ color }) {
                       </Flex>
                     </CardBody>
                     <CardFooter>
-                      <HStack spacing={2}>
+                      <HStack wrap={'wrap'} spacing={2}>
                         {exp.badges.map((badge) => (
                           <Badge
                             key={badge.name}

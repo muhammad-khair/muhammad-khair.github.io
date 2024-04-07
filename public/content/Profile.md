@@ -2,18 +2,16 @@
 - Portable Portfolio
 
 ## Header
-- Hi, my name is Eldora. 
+- Hi, my name is Khair. 
 - I'm a software engineer.
-- Short Description Here.
 
 ## About
-Write your "About" section here.
+Experienced Technology Analyst with a passion for building robust software solutions in the financial sector. Driven by a desire to continuously learn and adapt to new challenges, thrives in innovative and collaborative environments.
 
 ## Contact
-Write your "Contact" section here.
-- LinkedIn: https://linkedin.com/in/username
-- GitHub: https://github.com/username
-- Email: username@gmail.com
+
+- LinkedIn: https://www.linkedin.com/in/muhammadkhair-binabdulrashid/
+- GitHub: https://github.com/muhammad-khair
 
 ## Logo
-- EB
+- K

@@ -13,10 +13,6 @@ import ProfileArray from "./ProfileArray";
 
 export default function Header({ color }) {
   const profile = ProfileArray();
-  const scrollToContact = () => {
-    const contactSection = document.querySelector("#contact");
-    contactSection.scrollIntoView({ behavior: "smooth" });
-  };
   const linkedin = () => {
     window.open(
                 `${profile.linkedin}`,
@@ -51,12 +47,16 @@ export default function Header({ color }) {
               {profile.headerRole}
             </Text>
           </Heading>
-          <Text
-            color={"gray.500"}
-            fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
-          >
-            {profile.headerDesc}
-          </Text>
+          {
+            !profile.headerDesc
+            ? <></>
+            : <Text
+              color={"gray.500"}
+              fontSize={{ base: "lg", sm: "xl", md: "2xl" }}
+            >
+              {profile.headerDesc}
+            </Text>
+          }
           <Stack
             direction={"column"}
             spacing={3}
@@ -75,14 +75,6 @@ export default function Header({ color }) {
               onClick={linkedin}
             >
               Let's connect!
-            </Button>
-            <Button
-              variant={"link"}
-              colorScheme={"blue"}
-              size={"sm"}
-              onClick={scrollToContact}
-            >
-              Contact Me
             </Button>
             <Box>
               <Icon
