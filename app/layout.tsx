@@ -1,13 +1,16 @@
 import type { Metadata } from 'next'
-import { Inter, Space_Grotesk } from 'next/font/google'
+import { JetBrains_Mono } from 'next/font/google'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
-const spaceGrotesk = Space_Grotesk({ subsets: ['latin'], variable: '--font-space' })
+const jetbrainsMono = JetBrains_Mono({
+  subsets: ['latin'],
+  variable: '--font-mono',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
-  title: 'Muhammad Khair | Software Engineer',
-  description: 'Portfolio of Muhammad Khair - Software Engineer',
+  title: "Khair's Portfolio",
+  description: 'Portfolio of Muhammad Khair',
 }
 
 export default function RootLayout({
@@ -16,8 +19,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className="scroll-smooth">
-      <body className={`${inter.variable} ${spaceGrotesk.variable} bg-neutral-950 text-white antialiased font-sans`}>
+    <html lang="en" className="h-full" suppressHydrationWarning>
+      <body className={`${jetbrainsMono.variable} bg-vscode-bg text-vscode-text font-mono h-full m-0 p-0 overflow-hidden`}>
         {children}
       </body>
     </html>

@@ -9,42 +9,30 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        teal: {
-          50: '#f0fdfa',
-          100: '#ccfbf1',
-          200: '#99f6e4',
-          300: '#5eead4',
-          400: '#2dd4bf',
-          500: '#14b8a6',
-          600: '#0d9488',
-          700: '#0f766e',
-          800: '#115e59',
-          900: '#134e4a',
-          950: '#042f2e',
+        vscode: {
+          bg: '#1e1e1e',
+          sidebar: '#252526',
+          activity: '#333333',
+          status: '#007acc',
+          tab: {
+            active: '#1e1e1e',
+            inactive: '#2d2d2d',
+          },
+          border: '#3c3c3c',
+          text: '#cccccc',
+          textMuted: '#858585',
+          hover: '#2a2d2e',
+          blue: '#007acc',
+          green: '#4ec9b0',
+          yellow: '#dcdcaa',
+          orange: '#ce9178',
+          purple: '#c586c0',
+          red: '#f14c4c',
+          teal: '#14b8a6',
         },
       },
       fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        display: ['Space Grotesk', 'sans-serif'],
-      },
-      animation: {
-        'fade-in': 'fadeIn 0.5s ease-out forwards',
-        'fade-up': 'fadeUp 0.6s ease-out forwards',
-        'slide-in': 'slideIn 0.4s ease-out forwards',
-      },
-      keyframes: {
-        fadeIn: {
-          '0%': { opacity: '0' },
-          '100%': { opacity: '1' },
-        },
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        slideIn: {
-          '0%': { opacity: '0', transform: 'translateX(-20px)' },
-          '100%': { opacity: '1', transform: 'translateX(0)' },
-        },
+        mono: ['JetBrains Mono', 'Fira Code', 'Consolas', 'Monaco', 'monospace'],
       },
     },
   },

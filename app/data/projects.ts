@@ -8,39 +8,50 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    name: "TuitionE",
-    description: "A platform connecting students with tutors for personalized learning.",
-    image: "/images/tuitione.png",
+    name: "Software Interview Xchange",
+    description: "Collaboration service for those in the technology domain to practice their technical and communication skills through practicing LeetCode questions.",
+    image: "/images/six.png",
     badges: [
-      { text: "React", colorScheme: "blue" },
-      { text: "Node.js", colorScheme: "green" },
+      { text: "JavaScript", colorScheme: "teal" },
+      { text: "Express", colorScheme: "teal" },
+      { text: "React", colorScheme: "teal" },
+      { text: "Python", colorScheme: "teal" },
+      { text: "FastAPI", colorScheme: "teal" },
+      { text: "MongoDB", colorScheme: "green" },
+      { text: "MySQL", colorScheme: "green" },
+      { text: "Docker", colorScheme: "orange" },
     ],
     buttons: [
-      { text: "View", href: "#" },
+      { text: "Explore", href: "https://github.com/CS3219-AY2223S1/cs3219-project-ay2223s1-g4" },
     ],
   },
   {
     name: "Rendr",
-    description: "A modern rendering engine for real-time graphics applications.",
+    description: "Regional champion solution for Customisable Report Rendering Problem Statement in Goldman Sachs' ENGage 2021.",
     image: "/images/rendr.png",
     badges: [
-      { text: "WebGL", colorScheme: "pink" },
-      { text: "TypeScript", colorScheme: "blue" },
+      { text: "Java", colorScheme: "teal" },
+      { text: "Springboot", colorScheme: "teal" },
+      { text: "JavaScript", colorScheme: "teal" },
+      { text: "React", colorScheme: "teal" },
+      { text: "Python", colorScheme: "teal" },
+      { text: "MySQL", colorScheme: "green" },
+      { text: "Docker", colorScheme: "orange" },
     ],
     buttons: [
-      { text: "View", href: "#" },
+      { text: "Explore", href: "https://github.com/MJKR-Tech/Rendr" },
     ],
   },
   {
-    name: "Taiger",
-    description: "AI-powered document processing and extraction platform.",
-    image: "/images/taiger.png",
+    name: "TuitiONE",
+    description: "Tuition management application for customer service officers.",
+    image: "/images/tuitione.png",
     badges: [
-      { text: "Python", colorScheme: "yellow" },
-      { text: "ML", colorScheme: "purple" },
+      { text: "Java", colorScheme: "teal" },
+      { text: "JavaFX", colorScheme: "teal" },
     ],
     buttons: [
-      { text: "View", href: "#" },
+      { text: "Explore", href: "https://ay2122s1-cs2103t-f13-4.github.io/tp/" },
     ],
   },
 ]
