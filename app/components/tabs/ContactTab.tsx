@@ -25,7 +25,7 @@ export default function ContactTab() {
             </div>
             <span className="text-xs text-vscode-textMuted">Kotlin</span>
           </div>
-          
+
           <div className="bg-vscode-sidebar p-4 overflow-x-auto">
             <pre className="text-sm font-mono leading-relaxed">
               <code>
@@ -44,20 +44,20 @@ export default function ContactTab() {
                 <span className="text-yellow-400">:</span>{' '}
                 <span className="text-orange-400">String</span>{' '}
                 <span className="text-yellow-400">=</span>{' '}
-                <span className="text-green-400">"linkedin.com/in/..."</span>
+                <span className="text-green-400">"{profile.linkedin}"</span>
                 <span className="text-yellow-400">,</span>
                 <br />
                 {'    '}<span className="text-blue-400">val github</span>
                 <span className="text-yellow-400">:</span>{' '}
                 <span className="text-orange-400">String</span>{' '}
                 <span className="text-yellow-400">=</span>{' '}
-                <span className="text-green-400">"github.com/muhammad-khair"</span>
+                <span className="text-green-400">"{profile.github}"</span>
                 <br />
                 <span className="text-yellow-400">)</span>
               </code>
             </pre>
           </div>
-          
+
           <div className="flex items-center gap-2 px-3 py-1 bg-vscode-activity border-t border-vscode-border">
             <span className="text-xs text-vscode-textMuted">Out[1]:</span>
             <span className="text-xs text-green-400">kotlin.DataClass(contactInfo=...)</span>
