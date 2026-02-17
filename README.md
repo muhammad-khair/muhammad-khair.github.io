@@ -1,127 +1,111 @@
-# Portfolio using React.js and Chakra UI
+# Portfolio - VS Code Themed
 
-This portfolio is built using React.js and Chakra UI. It allows you to quickly create and customize your portfolio website using markdown files.
+A modern, interactive portfolio website styled like Visual Studio Code. Built with Next.js, TypeScript, Tailwind CSS, and Framer Motion.
+
+![VS Code Portfolio](./public/images/screenshot.png)
+
+## Features
+
+- **VS Code-inspired UI** - Full IDE-like experience with activity bar, sidebar, tabs, editor, and status bar
+- **Interactive tabs** - Drag-and-drop tab reordering, closeable tabs
+- **Jupyter notebook-style code blocks** - Syntax-highlighted content in Kotlin style
+- **Collapsible terminal** - Integrated terminal with typing animation
+- **Responsive design** - Works on desktop and mobile
+- **Dark theme** - VS Code Dark+ color scheme
+
+## Tech Stack
+
+- **Next.js 13** - App Router with static export
+- **TypeScript** - Type-safe components
+- **Tailwind CSS** - Utility-first styling
+- **Framer Motion** - Smooth animations
+- **@dnd-kit** - Drag and drop for tabs
+
+## Project Structure
+
+```
+├── app/
+│   ├── components/
+│   │   ├── ActivityBar.tsx    # Left icon bar
+│   │   ├── SideBar.tsx        # File explorer
+│   │   ├── TabsBar.tsx       # Draggable tabs
+│   │   ├── StatusBar.tsx     # Bottom status bar
+│   │   ├── Terminal.tsx       # Collapsible terminal
+│   │   ├── VSCodeLayout.tsx   # Main layout
+│   │   └── tabs/              # Tab content components
+│   │       ├── WelcomeTab.tsx
+│   │       ├── AboutTab.tsx
+│   │       ├── ExperienceTab.tsx
+│   │       ├── ProjectsTab.tsx
+│   │       └── ContactTab.tsx
+│   ├── data/                  # Content data
+│   │   ├── profile.ts        # Profile & skills
+│   │   ├── experience.ts      # Work experience
+│   │   └── projects.ts       # Portfolio projects
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── public/images/              # Project screenshots
+├── tailwind.config.ts
+├── next.config.js
+└── package.json
+```
 
 ## Getting Started
 
-To get started with development, you can use the following commands:
-
-```
+```bash
 # Install dependencies
-yarn install
+npm install
 
-# Start the development server
-yarn start
+# Start development server
+npm run dev
 
-# Build the static files
-yarn build
+# Build for production
+npm run build
 ```
 
-After running `yarn start`, your website should be available at `http://localhost:3000`.
+The built files will be in the `out/` directory, ready for deployment to GitHub Pages.
 
-## Site Name
+## Deployment
 
-To edit the site name, go to `public/index.html` and change the `<title>`
+This project is configured for GitHub Pages deployment. The workflow automatically:
+- Builds on every push to any branch
+- Deploys to GitHub Pages when pushing to main branch
 
-```
-<title>Site Name</title>
-```
+## Customization
 
-## Editing Content
+### Profile Data
 
-To edit the content on your website, refer to the markdown files located in the `public/content` folder.
+Edit `app/data/profile.ts`:
+- Name, role, and bio
+- Skills (categorized as language, database, or infrastructure)
+- Education history
+- Social links (LinkedIn, GitHub, email)
 
-### Profile.md
+### Experience
 
-```
-## Header
-- Hi, my name is ______.
-- I'm a ______.
-- Short Description Here.
+Edit `app/data/experience.ts`:
+- Company name and logo
+- Position and duration
+- Description and skills used
 
-## About
-Write your "About" section here.
+### Projects
 
-## Contact
-Write your "Contact" section here.
-- LinkedIn: https://linkedin.com/in/username
-- GitHub: https://github.com/username
-- Email: username@gmail.com
+Edit `app/data/projects.ts`:
+- Project name and description
+- Screenshot image
+- Technology badges
+- Links to repository/demo
 
-## Logo
-- EB
-```
+## Color Scheme
 
-### ExperienceTags.md and ProjectsTags.md
+The VS Code theme colors are defined in `tailwind.config.ts`:
+- Background: `#1e1e1e`
+- Sidebar: `#252526`
+- Activity Bar: `#333333`
+- Status Bar: `#007acc` (VS Code blue)
+- Accent colors for syntax highlighting
 
-```
-Category 1
-Category 2
-Category 3
-```
+## License
 
-### Experience.md
-
-To edit your work experience, update the `Experience.md` file with the following format:
-
-```
-## Company Name
-- *Role* | Period
-- ![image_name](../assets/image_name.png)
-- Tags: Work
-- Badges:
-  - BadgeContent [badge_colour]
-- List Items:
-  - Point 1
-  - Point 2
-```
-
-### Projects.md
-
-To edit your projects, update the `Projects.md` file with the following format:
-
-```
-## Project Name
-Description
-- ![image_name](../assets/image_name.png)
-- Tags: WebDev
-- Badges:
-  - BadgeContent [badge_colour]
-- Buttons:
-  - ButtonContent [button_link]
-```
-
-### OtherProjects.md
-
-To edit other projects or items, update the `OtherProjects.md` file with the following format:
-
-```
-## Project Name
-Description
-- Tags: WebDev
-- Badges:
-  - BadgeContent [badge_colour]
-- Buttons:
-  - ButtonContent [button_link]
-```
-
-## Colour Theme
-
-You can choose from 10 different colours provided by Chakra UI. Modify the `color` variable in the `App.js` file located in the `src` folder.
-
-```
-// Available Colours:
-// blue, cyan, gray, green, orange, pink, purple, red, teal, yellow
-
-const color = "pink";
-```
-
-## Customizing Design
-
-You can customize the design of your website by modifying the `theme.js` file located in the `src` folder. Refer to the Chakra UI documentation for more information on how to customize your theme.
-
-## Usage
-
-You may use this template for your own portfolio as long as you give me proper credit by linking back to my profile.
-
-For more details on hosting this site, you may refer to [A Step-by-Step Guide: Deploying on Netlify](https://www.netlify.com/blog/2016/09/29/a-step-by-step-guide-deploying-on-netlify/)
+MIT License - Feel free to use this template for your own portfolio.
