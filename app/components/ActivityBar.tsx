@@ -1,18 +1,20 @@
 'use client'
 
 import { useState } from 'react'
-import { 
-  FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope, 
-  FaBars, FaTimes, FaGithub, FaLinkedin 
+import {
+  FaHome, FaUser, FaBriefcase, FaCode, FaEnvelope,
+  FaBars, FaTimes, FaGithub, FaLinkedin, FaTerminal
 } from 'react-icons/fa'
 
 interface ActivityBarProps {
   onToggleSidebar: () => void
   sidebarVisible: boolean
   onOpenTab?: (tabId: string) => void
+  terminalOpen?: boolean
+  onToggleTerminal?: () => void
 }
 
-export default function ActivityBar({ onToggleSidebar, sidebarVisible, onOpenTab }: ActivityBarProps) {
+export default function ActivityBar({ onToggleSidebar, sidebarVisible, onOpenTab, terminalOpen, onToggleTerminal }: ActivityBarProps) {
   return (
     <div className="w-12 bg-vscode-activity flex flex-col items-center py-2 border-r border-vscode-border">
       {/* Sidebar Toggle */}
@@ -83,6 +85,20 @@ export default function ActivityBar({ onToggleSidebar, sidebarVisible, onOpenTab
           <FaLinkedin className="w-4 h-4" />
         </a>
       </div>
+
+      {/* Terminal Toggle */}
+      {onToggleTerminal && (
+        <button
+          onClick={onToggleTerminal}
+          className={`p-2 rounded transition-colors mb-2 ${terminalOpen
+              ? 'text-vscode-blue bg-vscode-hover'
+              : 'text-vscode-textMuted hover:text-vscode-text hover:bg-vscode-hover'
+            }`}
+          title="Toggle Terminal"
+        >
+          <FaTerminal className="w-4 h-4" />
+        </button>
+      )}
     </div>
   )
 }

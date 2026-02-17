@@ -39,7 +39,7 @@ export default function VSCodeLayout() {
         setSidebarVisible(false)
       }
     }
-    
+
     checkMobile()
     window.addEventListener('resize', checkMobile)
     return () => window.removeEventListener('resize', checkMobile)
@@ -56,7 +56,7 @@ export default function VSCodeLayout() {
       setOpenTabs([...openTabs, tab])
       setActiveTabId(tabId)
     }
-    
+
     if (isMobile) {
       setSidebarVisible(false)
     }
@@ -65,7 +65,7 @@ export default function VSCodeLayout() {
   const handleCloseTab = (tabId: string) => {
     const tabIndex = openTabs.findIndex(t => t.id === tabId)
     const newTabs = openTabs.filter(t => t.id !== tabId)
-    
+
     if (newTabs.length === 0) {
       setOpenTabs([fileTabs[0]])
       setActiveTabId('welcome')
@@ -76,7 +76,7 @@ export default function VSCodeLayout() {
       const newActiveIndex = tabIndex === newTabs.length ? tabIndex - 1 : tabIndex
       setActiveTabId(newTabs[newActiveIndex].id)
     }
-    
+
     setOpenTabs(newTabs)
   }
 
@@ -96,53 +96,55 @@ export default function VSCodeLayout() {
       <div className="h-screen flex flex-col bg-vscode-bg">
         <div className="flex flex-1 overflow-hidden">
           {/* Activity Bar */}
-          <ActivityBar 
+          <ActivityBar
             onToggleSidebar={() => setSidebarVisible(!sidebarVisible)}
             sidebarVisible={sidebarVisible}
             onOpenTab={handleOpenTab}
+            terminalOpen={terminalOpen}
+            onToggleTerminal={() => setTerminalOpen(!terminalOpen)}
           />
-          
+
           {/* SideBar */}
           {sidebarVisible && (
-            <SideBar 
-              onOpenTab={handleOpenTab} 
+            <SideBar
+              onOpenTab={handleOpenTab}
               isMobile={isMobile}
               onClose={isMobile ? () => setSidebarVisible(false) : undefined}
             />
           )}
-          
+
           {/* Main Editor Area */}
           <div className="flex-1 flex flex-col overflow-hidden">
             {/* Tabs */}
             <SortableContext items={openTabs.map(t => t.id)} strategy={horizontalListSortingStrategy}>
-              <TabsBar 
+              <TabsBar
                 tabs={openTabs}
                 activeTabId={activeTabId}
                 onTabClick={setActiveTabId}
                 onTabClose={handleCloseTab}
               />
             </SortableContext>
-            
+
             {/* Editor Content */}
             <div className="flex-1 overflow-hidden relative">
               <div className="absolute inset-0 overflow-auto">
                 <ActiveComponent onOpenTab={handleOpenTab} />
               </div>
             </div>
-            
+
             {/* Terminal */}
             {terminalOpen && (
-              <Terminal 
-                height={terminalHeight} 
+              <Terminal
+                height={terminalHeight}
                 onClose={() => setTerminalOpen(false)}
                 onResize={(delta) => setTerminalHeight(prev => Math.max(100, Math.min(400, prev + delta)))}
               />
             )}
           </div>
         </div>
-        
+
         {/* Status Bar */}
-        <StatusBar 
+        <StatusBar
           terminalOpen={terminalOpen}
           onToggleTerminal={() => setTerminalOpen(!terminalOpen)}
           activeTab={openTabs.find(t => t.id === activeTabId)}

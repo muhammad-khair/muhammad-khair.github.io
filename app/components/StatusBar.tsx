@@ -24,16 +24,16 @@ export default function StatusBar({ terminalOpen, onToggleTerminal, activeTab }:
       </div>
 
       {/* Right Section */}
-      <div className="flex items-center gap-4">
-        <span className="flex items-center gap-1.5 hover:bg-white/20 px-2 py-0.5 rounded cursor-pointer">
+      <div className="flex items-center gap-2 md:gap-4">
+        <span className="hidden md:flex items-center gap-1.5 hover:bg-white/20 px-2 py-0.5 rounded cursor-pointer">
           <FaCodeBranch className="w-3 h-3" />
           <span>main</span>
         </span>
-        <span className="flex items-center gap-1.5 hover:bg-white/20 px-2 py-0.5 rounded cursor-pointer">
+        <span className="hidden md:flex items-center gap-1.5 hover:bg-white/20 px-2 py-0.5 rounded cursor-pointer">
           <FaGithub className="w-3 h-3" />
           <span>0↓ 0↑</span>
         </span>
-        <span className="flex items-center gap-1.5">
+        <span className="hidden md:flex items-center gap-1.5">
           <FaCheck className="w-3 h-3 text-green-400" />
           <span>0</span>
           <FaTimes className="w-3 h-3 text-red-400" />
