@@ -27,7 +27,7 @@ export default function AboutTab() {
           </div>
 
           {/* Code content */}
-          <div className="bg-vscode-sidebar p-4">
+          <div className="bg-vscode-sidebar p-4 overflow-x-auto">
             <pre className="text-sm font-mono leading-relaxed">
               <code>
                 <span className="text-yellow-400">data class </span>
@@ -73,7 +73,7 @@ export default function AboutTab() {
             <span className="text-xs text-vscode-textMuted">In [2]:</span>
           </div>
           <div className="bg-vscode-sidebar p-4 rounded-lg border border-vscode-border overflow-hidden">
-            <pre className="text-sm font-mono whitespace-pre-wrap break-words">
+            <pre className="text-sm font-mono whitespace-pre-wrap break-words overflow-x-auto">
               <code className="text-vscode-text">
                 {profile.about}
               </code>

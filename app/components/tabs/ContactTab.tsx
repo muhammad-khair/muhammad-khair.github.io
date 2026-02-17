@@ -26,7 +26,7 @@ export default function ContactTab() {
             <span className="text-xs text-vscode-textMuted">Kotlin</span>
           </div>
           
-          <div className="bg-vscode-sidebar p-4">
+          <div className="bg-vscode-sidebar p-4 overflow-x-auto">
             <pre className="text-sm font-mono leading-relaxed">
               <code>
                 <span className="text-yellow-400">data class</span>{' '}
