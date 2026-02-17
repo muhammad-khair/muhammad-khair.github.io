@@ -1,4 +1,0 @@
-All
-Financial Services
-Teaching
-Semantic Technology

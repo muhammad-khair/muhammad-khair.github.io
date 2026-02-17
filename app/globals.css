@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-vscode-bg text-vscode-text;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    @apply bg-vscode-bg;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    @apply bg-vscode-border rounded;
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-vscode-textMuted;
+  }
+}
+
+@layer utilities {
+  .vscode-glass {
+    @apply bg-vscode-bg border border-vscode-border;
+  }
+  
+  .vscode-glass-hover {
+    @apply transition-colors duration-150 hover:bg-vscode-hover;
+  }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.animate-blink {
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  0%, 100% { border-color: #007acc; }
+  50% { border-color: transparent; }
+}
+
+.animate-cursor-blink {
+  animation: cursor-blink 1s step-end infinite;
+}
